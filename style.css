@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: rgba(35, 45, 57, 0.5);
+    height: 4rem;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px;
+    z-index: 10;
+}
+.hamburger {
+    display: none;
+
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 1120px);
+    padding: 0 15px;
+}
+
+.header-content {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+.head-1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.std {
+    color: #ed563c;
+}
+
+.menu-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 1.5rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: #ed563c;
+}
+
+.btn {
+    background-color: #ed563c;
+    color: #fff;
+    padding: 0.6875rem 1.0625rem;
+    border: none;
+    cursor: pointer;
+}
+.mobile-menu{
+    display: none;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(35, 45, 57, 0.8);
+    z-index: -1;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4) contrast(1.2);
+    /* Darker with slight contrast */
+    z-index: -1;
+}
+
+/* .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+} */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #191313;
+    text-align: center;
+}
+
+.hero-content h6 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 50rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.03125;
+}
+
+.hero-content h2 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 50rem;
+}
+
+.gy {
+    color: #ed563c;
+}
+
+.hero-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ed563c;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.hero-btn:hover {
+    background-color: #c04533;
+}
+
+.choose-program {
+    width: 33.75rem;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.choose-content {
+    margin-top: 6.25rem;
+}
+
+.choose-logo {
+    margin-block: 1rem;
+}
+
+.choose-para {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #7A7A7A;
+    line-height: 1.5625rem;
+}
+
+.fitness {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-block: 5rem;
+}
+
+.fitness-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem
+}
+
+.fitness-grid {
+    display: flex;
+    gap: 1.875rem;
+    margin-bottom: 30px;
+}
+
+.fitness-content {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.fit-sp {
+    color: rgb(0, 123, 255);
+}
+
+.fitness-content h4 {
+    font-size: 1.1875rem;
+    font-family: 600;
+    letter-spacing: 0.25px;
+    color: rgb(35, 45, 57)
+}
+
+.fitness-btn {
+    text-decoration: none;
+    color: rgb(237, 86, 59);
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.fitness-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.begin-today {
+    background: url('https://templatemo.com/templates/templatemo_548_training_studio/assets/images/cta-bg.jpg') center / cover no-repeat;
+    height: 23.6875vh;
+    background-color: #c04533;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10rem;
+}
+
+.begin-content {
+    display: block;
+    margin-inline: auto;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.begin-content h1 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.begin-content .pr {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.begin-content .btn-begin {
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #ed563c;
+}
+
+.fst-training-class{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-block: 5rem;
+}
+.fst-train {
+    /* background-color: #ed563c; */
+    grid-column: span 1;
+    height: 300px;
+    gap: 2.1875rem;
+    display: flex;
+    flex-direction: column;
+}
+.fst-item{
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(192, 180, 180, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    display: block;
+    gap: 20px;
+}
+.fst-content {
+    display: flex;
+    gap: 20px;
+}
+.fst-content a {
+    text-decoration: none;
+    color: #ed563c;
+    text-align: center;
+    font-size: 1.1875rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+}
+.fst-content .fst-anch{
+    color: #191313;
+}
+.fst-btn{
+    padding: 20px 0px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 1.1875rem;
+}
+
+
+.sec-train {
+    grid-column: span 2;
+    height: 300px;
+}
+.sec-train img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sc-content{
+    margin-block: 1rem;
+    padding-block: 1rem;
+}
+.sc-content .sc-pra{
+    /* margin-top: 1rem; */
+    font-size: 0.875rem;
+}
+.sc-content .sec-content{
+    display: inline-block;
+    background-color: #ed563c;
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+    /* margin-top: 1rem; */
+}
+
+.classes-schedule{
+    margin-top: 18.75rem;
+    background: url('https://templatemo.com/templates/templatemo_548_training_studio/assets/images/schedule-bg.jpg') top / cover no-repeat;
+    /* height: 90vh; */
+}
+.schedule{
+    width: 33.75rem;
+    text-align: center;
+    margin-inline: auto;
+    }
+.schedule-content{
+    padding: 5rem 0;
+    color: #ffffff;
+}
+.schedule-content .choose-para{
+    color: rgb(255, 255, 255);
+    font-size: 0.875rem;
+}
+
+.weekdays {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.weekdays li {
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.weekdays li:not(:last-child)::after {
+    content: "/";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+}
+.monday {
+    color: #ed563c;
+}
+
+/* Center the table container */
+.table-trainer{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+}
+
+/* Style the table */
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+    /* text-align: center; */
+    margin-block: 3rem;
+}
+
+/* .schedule-table th, */
+.schedule-table td {
+    border: 1px solid #ddd;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.strengh-trainer {
+    margin-block: 5rem;
+}
+
+.stenght-boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.stenght-img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.stenght-img img {
+    width: 100%;
+    height: auto;
+}
+
+.stenght-box {
+    background-color: white;
+    padding: 1rem;
+    width: 350px;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(236, 236, 236, 0.9);
+    padding: 2rem;
+
+}
+
+.stenght-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.str-span{
+    color: #ed563c;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+.stenght-content h4 {
+    color: rgb(35, 45, 57);
+    font-size: 1.1875rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.stenght-content p{
+    font-size: 0.875;
+    font-weight: 400;
+}
+
+.strength-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.strength-icons li {
+    list-style: none;
+}
+
+.fab {
+    font-weight: 400;
+    color: rgb(35, 45, 57);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.grid-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 2rem;
+    align-items: center; 
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.gym-map {
+    width: 100%;
+    height: 100%;
+    max-height: 700px; 
+}
+
+.gym-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; 
+    background: url('https://templatemo.com/templates/templatemo_548_training_studio/assets/images/contact-bg.jpg') center / cover no-repeat;
+    max-height: 700px; 
+}
+
+.gym-color{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.gym-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    width: 800px;
+    padding: 40px;
+
+}
+.btn-form {
+    display: inline;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    width: 160px
+
+}
+
+.vertical-fields {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+
+
+.horizontal-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="subject"],
+textarea {
+    width: 100%;
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; 
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+
+/* Footer Styles */
+footer {
+    /* background-color: #232D39; */
+    padding: 1rem 0;
+    color: rgb(35, 45, 57);
+    text-align: center;
+    font-size: 0.8125rem;
+    font-weight: 400;
+}
+
+footer .container {
+    width: min(90%, 1120px);
+    margin-inline: auto;
+}
+.hamburger , .nav-links{
+    display: none
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+
+      .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0.5%;
+        right: 5%;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        font-size: 2rem;
+        color: #fff;
+        z-index: 1000;
+        /* Ensure it stays on top */
+    }
+
+  
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        background-color: #2b2b2b;
+        justify-content: center;
+        inset: 0 0 0 0;
+        transform: translateX(0%);
+        transition: transform 350ms ease-in-out;
+        z-index: 999;
+    }
+  .mobile-menu[data-visible="true"] .nav-links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu[data-visible="false"] {
+        transform: translateX(100%);
+    }
+
+    .hamburger i[data-visible="true"] {
+        display: block;
+    }
+
+    .hamburger i[data-visible="false"] {
+        display: none;
+    }
+
+           .navigation {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin-top: 5rem;
+               gap: 2rem;
+           }
+    
+           .navigation h1 {
+               font-size: 2.3125rem;
+               font-weight: 700;
+               color: #fff;
+               border-bottom: 1px solid white;
+               padding: 20px;
+           }
+           .navigation .nav-links{
+                display: flex;
+                /* background-color: red; */
+                flex-direction: column;
+                gap: 2rem;
+                width: 300px
+                
+            
+           }
+           .navigation .nav-links li{
+            list-style: none;
+            margin: 10px;
+            border-bottom: 2px solid rgb(255, 255, 255);   
+            padding: 10px;
+
+           }
+           .navigation .nav-links .btn{
+            background:  #ed563c;
+            padding: 10px 50px;
+            border-radius: 10px;
+            /* background-color: transparent; */
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-items: center;
+            font-weight: 500;
+           }
+           .nav-links a {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px 0;
+           }
+           .navigation .nav-links ul{
+            list-style: none;
+            padding: 10px
+           }
+           .navbar{
+            display: none;
+           }
+
+    /* Show the hamburger menu */
+ 
+
+    /* Hero Section */
+    .hero-section {
+        height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .hero-content h6 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Choose Program Section */
+    .choose-program {
+        width: 90%;
+    }
+
+    /* Fitness Section */
+    .fitness {
+        grid-template-columns: 1fr;
+        margin-block: 2rem;
+    }
+
+    .fitness-left,
+    .fitness-right {
+        gap: 1.5rem;
+    }
+
+    /* Begin Today Section */
+    .begin-today {
+        height: auto;
+        padding: 5rem 2rem;
+        text-align: center;
+    }
+
+    .begin-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Strength Trainer Section */
+    .fst-training-class {
+        grid-template-columns: 1fr;
+    }
+
+    .fst-train,
+    .sec-train {
+        grid-column: span 1;
+        height: auto;
+    }
+
+    /* Class Schedule Section */
+    .classes-schedule {
+        margin-top: 5rem;
+        padding: 2rem;
+    }
+
+    .schedule {
+        width: 100%;
+    }
+
+    /* Schedule Table */
+    .schedule-table table {
+        font-size: 0.75rem;
+        padding: 20px;
+    }
+
+    .schedule-table td {
+        padding: 10px;
+    }
+        .grid-map {
+            grid-template-columns: 1fr;
+            /* Stacks the map and contact form vertically */
+        }
+
+        .gym-form form {
+            width: 100%;
+            /* Make the form width adjust to its container */
+            padding: 20px;
+            /* Reduce padding for smaller screens */
+        }
+
+        .gym-contact {
+            padding: 20px;
+            /* Reduce padding for smaller screens */
+        }
+
+        .btn-form {
+            width: 100%;
+            /* Make the button take the full width of its container */
+            text-align: center;
+            /* Center the button text */
+                }
+}
+
+
+
+
+   
+
+
+/* Media Query for Tablets */
+@media (max-width: 992px) {
+
+    /* Adjust font sizes */
+    body {
+        font-size: 0.9rem;
+    }
+
+    .hero-content h2 {
+        font-size: 4rem;
+    }
+
+    .hero-content h6 {
+        font-size: 1.1rem;
+    }
+
+    /* Update for .fitness to make images single column on iPad */
+    .fitness {
+        grid-template-columns: 1fr; /* Ensure single column */
+        gap: 20px;
+        margin-block: 2rem;
+    }
+
+    .fitness-left,
+    .fitness-right {
+        gap: 1.5rem;
+    }
+
+    .stenght-boxes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Remove horizontal scrolling */
+    .container {
+        padding: 0 10px; /* Reduce padding */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .fst-training-class {
+        grid-template-columns: 1fr; /* Single column for images */
+    }
+
+    .fst-train,
+    .sec-train {
+        height: auto;
+    }
+
+    .schedule {
+        width: 100%;
+    }
+}
+
+
